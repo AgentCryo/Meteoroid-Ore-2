@@ -5,14 +5,16 @@ import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    REFINED_METEOROID(5, 1400, 4.5f, 4.5f, 30, () -> Ingredient.ofItems(ModItems.REFINED_METEOROID_ORE)),
-    METEOROID(3, 800, 2.5f, 3, 20, () -> Ingredient.ofItems(ModItems.RAW_METEOROID_ORE));
+    REFINED_METEOROID(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,5, 1400, 5f, 4.5f, 30, () -> Ingredient.ofItems(ModItems.REFINED_METEOROID_ORE)),
+    METEOROID(BlockTags.INCORRECT_FOR_DIAMOND_TOOL,3, 800, 3f, 3, 26, () -> Ingredient.ofItems(ModItems.RAW_METEOROID_ORE));
 
+    private final TagKey<Block> inverseTag;
     private final int miningLevel;
     private final int itemDurablility;
     private final float miningSpeed;
@@ -20,7 +22,8 @@ public enum ModToolMaterial implements ToolMaterial {
     private final int enchantablility;
     private final Supplier<Ingredient> repairMaterial;
 
-    ModToolMaterial(int miningLevel, int itemDurablility, float miningSpeed, float attackDamage, int enchantablility, Supplier<Ingredient> repairMaterial) {
+    ModToolMaterial(final TagKey inverseTag, int miningLevel, int itemDurablility, float miningSpeed, float attackDamage, int enchantablility, Supplier<Ingredient> repairMaterial) {
+        this.inverseTag = inverseTag;
         this.miningLevel = miningLevel;
         this.itemDurablility = itemDurablility;
         this.miningSpeed = miningSpeed;
@@ -46,7 +49,7 @@ public enum ModToolMaterial implements ToolMaterial {
 
     @Override
     public TagKey<Block> getInverseTag() {
-        return null;
+        return this.inverseTag;
     }
 
     @Override
