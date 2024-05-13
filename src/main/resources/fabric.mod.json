@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "meteoroid_ore_2",
+  "version": "${version}",
+  "name": "Meteoroid Ore 2",
+  "description": "",
+  "authors": [
+    "AgentCryo"
+  ],
+  "contact": {
+    "repo": "https://github.com/godiv/Meteoroid Ore 2"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/meteoroid_ore_2/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.agentcryo.meteoroid_ore_2.MeteoroidOre2"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

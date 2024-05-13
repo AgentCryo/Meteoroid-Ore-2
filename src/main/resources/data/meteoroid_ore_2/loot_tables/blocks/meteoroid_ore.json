@@ -1,0 +1,21 @@
+{
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "meteoroid_ore_2:raw_meteoroid_ore"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "meteoroid_ore_2:raw_meteoroid_ore"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air"
+        }
+      ]
+    }
+  ]
+}

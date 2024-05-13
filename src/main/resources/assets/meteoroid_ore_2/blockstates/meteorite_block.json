@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "meteoroid_ore_2:block/meteorite_block" }
+  }
+}

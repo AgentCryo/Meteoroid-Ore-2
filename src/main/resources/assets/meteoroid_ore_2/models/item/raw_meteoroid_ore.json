@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "meteoroid_ore_2:item/raw_meteoroid_ore"
+  }
+}

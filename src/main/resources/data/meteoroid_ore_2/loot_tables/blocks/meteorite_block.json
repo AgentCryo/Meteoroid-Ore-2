@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "meteoroid_ore_2:meteorite_block",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

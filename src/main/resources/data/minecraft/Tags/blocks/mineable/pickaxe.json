@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "meteoroid_ore_2:meteoroid_ore",
+    "meteoroid_ore_2:meteorite_block"
+  ]
+}
